@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushXml.js"></script>
+    <script type="text/javascript" src="js/shBrushJScript.js"></script>
+
+    <title>WebVTT Demo</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/shCoreDefault.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.defaults['smart-tabs'] = false;
+        SyntaxHighlighter.defaults['gutter'] = false;
+        SyntaxHighlighter.all();
+    </script>
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+    <img id="cache1" src="" alt="" style="width: 90%" style="display:none"/>
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+    <div id="impress">
+        <div class="step slide" data-x="0" data-y="-1500">
+            <div class="header">
+                <q>WebVTT in Action: Demo</q>
+            </div>
+            <div class="center">
+                <video src="media/demo.webm" controls preload="auto">
+                    <track kind="subtitles" src="captions/demo.vtt"  label="ptsubs" srclang="pt-BR" default />
+                </video>
+            </div>
+        </div>
+        <!-- Slide -->
+        <div class="step slide" data-x="1000" data-y="-1500">
+            <div class="header">
+                <q>Contributors</q>                
+            </div>
+            <ul style="float: left;">
+                <li>Ralph Giles</li>
+                <li>Caitlin Potter</li>
+                <li>Rick Eyre</li>
+                <li>Edwin Lim</li>
+                <li>Dale Karp </li>
+                <li>Michael Afidchao</li>
+                <li>Shayan Ahmad</li>
+                <li>Jordan Raffoul</li>
+                <li>David Humphrey</li>
+                <li>Vince Lee</li>
+            </ul>
+            <ul style="float: right;">
+                <li>Mandeep Garg</li>
+                <li>Anh Tran</li>
+                <li>Thevakaran Virutthasalam</li>
+                <li>Mike Shutov</li>
+                <li>Michael Stiver-Balla</li>
+                <li>Kyle Barnhart</li>
+                <li>David Perit</li>
+                <li>Marcus Saad</li>
+                <li>Jesse Silver</li>
+            </ul>
+        </div>
+        <!-- Slide -->
+        <div class="step slide" data-x="2000" data-y="-1500">
+            <div class="header">
+                <q>The End</q>
+            </div>
+            <h1>References</h1>
+            <ul class="smaller">
+                <li><a href="HTTP://dev.w3.org/html5/webvtt/">http://dev.w3.org/html5/webvtt/</a></li>
+                <li><a href="https://github.com/mozilla/webvtt">https://github.com/mozilla/webvtt</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/HTML/WebVTT">https://developer.mozilla.org/en-US/docs/HTML/WebVTT</a></li>
+            </ul>
+            <br />
+            <h1>Bugs</h1>
+            <ul class="smaller">
+                <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=833388">Bug 833388</a></li>
+                <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=833403">Bug 833403</a></li>
+                <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=833382">Bug 833382</a></li>
+                <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=833385">Bug 833385</a></li>
+                <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=833386">Bug 833386</a></li>
+            </ul>
+        </div>
+
+        <!--
+        
+        So to make a summary of all the possible attributes used to position presentation steps, we have:
+        
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+        
+        These values are used by impress.js in CSS transformation functions, so for more information consult
+        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+        
+      -->
+        <div id="overview" class="step" data-x="0" data-y="-1000" data-scale="4">
+        </div>
+
+    </div>
+
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+
+
+</body>
+</html>
+
